@@ -4,7 +4,7 @@
  */
 package core.views;
 
-import core.models.Calculator;
+import core.models.calculator.Calculator;
 import core.models.History;
 import core.models.Operation;
 import java.util.ArrayList;
