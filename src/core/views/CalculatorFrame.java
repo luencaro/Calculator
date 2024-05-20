@@ -37,104 +37,109 @@ public class CalculatorFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        tittleLabel = new javax.swing.JLabel();
+        num1Label = new javax.swing.JLabel();
+        num2Label = new javax.swing.JLabel();
+        resultLabel = new javax.swing.JLabel();
+        addButton = new javax.swing.JButton();
+        subtractButton = new javax.swing.JButton();
+        multiplyButton = new javax.swing.JButton();
+        divideButton = new javax.swing.JButton();
+        potencyButton = new javax.swing.JButton();
+        clearButton = new javax.swing.JButton();
+        updateButton = new javax.swing.JButton();
+        num1Field = new javax.swing.JTextField();
+        num2Field = new javax.swing.JTextField();
+        resultField = new javax.swing.JTextField();
+        historyScrollPanel = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
-        jTextField3 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setText("Calculator");
+        tittleLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        tittleLabel.setText("Calculator");
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton1.setText("Add");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        num1Label.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        num1Label.setText("Number 1");
+
+        num2Label.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        num2Label.setText("Number 2");
+
+        resultLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        resultLabel.setText("Result");
+
+        addButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        addButton.setText("Add");
+        addButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                addButtonActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton2.setText("Subtract");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        subtractButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        subtractButton.setText("Subtract");
+        subtractButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                subtractButtonActionPerformed(evt);
             }
         });
 
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton3.setText("Multiply");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        multiplyButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        multiplyButton.setText("Multiply");
+        multiplyButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                multiplyButtonActionPerformed(evt);
             }
         });
 
-        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton4.setText("Divide");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        divideButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        divideButton.setText("Divide");
+        divideButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                divideButtonActionPerformed(evt);
             }
         });
 
-        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton5.setText("Potency");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        potencyButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        potencyButton.setText("Potency");
+        potencyButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                potencyButtonActionPerformed(evt);
             }
         });
 
-        jButton6.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
-        jButton6.setText("Clear numbers");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        clearButton.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        clearButton.setText("Clear numbers");
+        clearButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                clearButtonActionPerformed(evt);
             }
         });
 
-        jButton7.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
-        jButton7.setText("Update history");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        updateButton.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        updateButton.setText("Update history");
+        updateButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                updateButtonActionPerformed(evt);
             }
         });
 
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        num1Field.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        num1Field.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                num1FieldActionPerformed(evt);
+            }
+        });
 
-        jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        num2Field.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel2.setText("Number 1");
-
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel3.setText("Number 2");
-
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel4.setText("Result");
+        resultField.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        resultField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        resultField.setEnabled(false);
 
         jList1.setFont(new java.awt.Font("Consolas", 0, 12)); // NOI18N
         jList1.setEnabled(false);
-        jScrollPane1.setViewportView(jList1);
-
-        jTextField3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jTextField3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField3.setEnabled(false);
+        historyScrollPanel.setViewportView(jList1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -143,157 +148,157 @@ public class CalculatorFrame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(clearButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(resultLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(num1Label, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(num2Label, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField1)
-                            .addComponent(jTextField2)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE))
+                            .addComponent(num1Field)
+                            .addComponent(num2Field)
+                            .addComponent(resultField, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(potencyButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(multiplyButton, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)
+                            .addComponent(addButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(15, 15, 15)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
-                            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(subtractButton, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
+                            .addComponent(divideButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(updateButton, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
+                    .addComponent(historyScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(188, 188, 188)
-                .addComponent(jLabel1)
+                .addComponent(tittleLabel)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(tittleLabel)
                 .addGap(12, 12, 12)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton7))
+                    .addComponent(num1Label)
+                    .addComponent(num1Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(updateButton))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(num2Label)
+                            .addComponent(num2Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(resultLabel)
+                            .addComponent(resultField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton1)
-                            .addComponent(jButton2))
+                            .addComponent(addButton)
+                            .addComponent(subtractButton))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton4)
-                            .addComponent(jButton3))
+                            .addComponent(divideButton)
+                            .addComponent(multiplyButton))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton5)
+                        .addComponent(potencyButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton6))
-                    .addComponent(jScrollPane1))
+                        .addComponent(clearButton))
+                    .addComponent(historyScrollPanel))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
         // TODO add your handling code here:
         try {
             Calculator calculator = new Calculator();
             
-            double number1 = Double.parseDouble(jTextField1.getText());
-            double number2 = Double.parseDouble(jTextField2.getText());
+            double number1 = Double.parseDouble(num1Field.getText());
+            double number2 = Double.parseDouble(num2Field.getText());
             double result = calculator.add(number1, number2);
             
             this.history.addOperation(new Operation(number1, number2, "+", result));
             
-            jTextField3.setText("" + result);
+            resultField.setText("" + result);
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, "Error", "Error", JOptionPane.ERROR_MESSAGE);
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_addButtonActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void subtractButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subtractButtonActionPerformed
         // TODO add your handling code here:
         try {
             Calculator calculator = new Calculator();
             
-            double number1 = Double.parseDouble(jTextField1.getText());
-            double number2 = Double.parseDouble(jTextField2.getText());
+            double number1 = Double.parseDouble(num1Field.getText());
+            double number2 = Double.parseDouble(num2Field.getText());
             double result = calculator.subtract(number1, number2);
             
             this.history.addOperation(new Operation(number1, number2, "-", result));
             
-            jTextField3.setText("" + result);
+            resultField.setText("" + result);
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, "Error", "Error", JOptionPane.ERROR_MESSAGE);
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_subtractButtonActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void multiplyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplyButtonActionPerformed
         // TODO add your handling code here:
         try {
             Calculator calculator = new Calculator();
             
-            double number1 = Double.parseDouble(jTextField1.getText());
-            double number2 = Double.parseDouble(jTextField2.getText());
+            double number1 = Double.parseDouble(num1Field.getText());
+            double number2 = Double.parseDouble(num2Field.getText());
             double result = calculator.multiply(number1, number2);
             
             this.history.addOperation(new Operation(number1, number2, "*", result));
             
-            jTextField3.setText("" + result);
+            resultField.setText("" + result);
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, "Error", "Error", JOptionPane.ERROR_MESSAGE);
         }
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_multiplyButtonActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void divideButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divideButtonActionPerformed
         // TODO add your handling code here:
         try {
             Calculator calculator = new Calculator();
             
-            double number1 = Double.parseDouble(jTextField1.getText());
-            double number2 = Double.parseDouble(jTextField2.getText());
+            double number1 = Double.parseDouble(num1Field.getText());
+            double number2 = Double.parseDouble(num2Field.getText());
             double result = calculator.divide(number1, number2);
             
             this.history.addOperation(new Operation(number1, number2, "/", result));
             
-            jTextField3.setText("" + result);
+            resultField.setText("" + result);
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, "Error", "Error", JOptionPane.ERROR_MESSAGE);
         }
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_divideButtonActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void potencyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_potencyButtonActionPerformed
         // TODO add your handling code here:
         JOptionPane.showMessageDialog(null, "Not Implemented", "Error", JOptionPane.ERROR_MESSAGE);
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_potencyButtonActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void clearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearButtonActionPerformed
         // TODO add your handling code here:
-        jTextField1.setText("");
-        jTextField2.setText("");
-        jTextField3.setText("");
-    }//GEN-LAST:event_jButton6ActionPerformed
+        num1Field.setText("");
+        num2Field.setText("");
+        resultField.setText("");
+    }//GEN-LAST:event_clearButtonActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void updateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButtonActionPerformed
         // TODO add your handling code here:
         ArrayList<Operation> operationHistory = this.history.getOperations();
         Collections.reverse(this.history.getOperations());
@@ -301,7 +306,11 @@ public class CalculatorFrame extends javax.swing.JFrame {
         DefaultListModel model = new DefaultListModel();
         model.addAll(operationHistory);
         jList1.setModel(model);
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_updateButtonActionPerformed
+
+    private void num1FieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num1FieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_num1FieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -340,21 +349,21 @@ public class CalculatorFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JButton addButton;
+    private javax.swing.JButton clearButton;
+    private javax.swing.JButton divideButton;
+    private javax.swing.JScrollPane historyScrollPanel;
     private javax.swing.JList<String> jList1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JButton multiplyButton;
+    private javax.swing.JTextField num1Field;
+    private javax.swing.JLabel num1Label;
+    private javax.swing.JTextField num2Field;
+    private javax.swing.JLabel num2Label;
+    private javax.swing.JButton potencyButton;
+    private javax.swing.JTextField resultField;
+    private javax.swing.JLabel resultLabel;
+    private javax.swing.JButton subtractButton;
+    private javax.swing.JLabel tittleLabel;
+    private javax.swing.JButton updateButton;
     // End of variables declaration//GEN-END:variables
 }
