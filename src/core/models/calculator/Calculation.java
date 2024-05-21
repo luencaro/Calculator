@@ -9,5 +9,5 @@ package core.models.calculator;
  * @author lcaba
  */
 public interface Calculation {
-    public double operation();
+    public abstract double operation();
 }

@@ -14,7 +14,6 @@ public class Add extends Calculator{
         super(a, b);
     }
     
-    
     @Override
     public double operation() {
         return this.a + this.b;

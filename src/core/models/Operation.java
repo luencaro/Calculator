@@ -26,5 +26,11 @@ public class Operation {
     public String toString() {
         return number1 + " " + operator + " " + number2 + " = " + result;
     }
+
+    public double getResult() {
+        return result;
+    }
+    
+    
     
 }
