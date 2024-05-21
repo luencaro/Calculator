@@ -12,19 +12,27 @@ import java.util.ArrayList;
  * @author edangulo
  */
 public class History {
-    
-    private ArrayList<Operation> operations;
+    private static History instance; //Singleton instance
+    private ArrayList<Operation> operations; //History atribute
 
-    public History() {
+    private History() {
         this.operations = new ArrayList<>();
     }
     
-    public void addOperation(Operation operation) {
-        this.operations.add(operation);
+    //Getters
+    public static History getInstance() {
+        if (instance == null) {
+            instance = new History();
+        }
+        return instance;
     }
 
     public ArrayList<Operation> getOperations() {
         return operations;
     }
     
+    //Since we want to save operations from the most recent, we treat our history as an stack with the LIFO rule    
+    public void addOperation(Operation operation) {
+        this.operations.add(operation);
+    }
 }

@@ -8,14 +8,23 @@ package core.models.calculator;
  *
  * @author lcaba
  */
-public class Divide extends Calculator {
+public class Potency extends Calculator{
 
-    public Divide(double a, double b) {
+    public Potency(double a, double b) {
         super(a, b);
     }
-    
+
     @Override
     public double operation() {
-        return this.a / this.b;
+       return Math.pow(this.a, this.b);
     }
+
+    public double getA() {
+        return a;
+    }
+
+    public double getB() {
+        return b;
+    }
+    
 }

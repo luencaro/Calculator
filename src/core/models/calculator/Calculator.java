@@ -12,11 +12,15 @@ public abstract class Calculator implements Calculation{
     
     protected double a;
     protected double b;
+
+    public Calculator(double a, double b) {
+        this.a = a;
+        this.b = b;
+    }
     
     
-    
-    
-//    public double add(double a, double b) {
+    //Old functionalities
+    //    public double add(double a, double b) {
 //        return a + b;
 //    }
 //    
@@ -32,9 +36,12 @@ public abstract class Calculator implements Calculation{
 //        return a / b;
 //    }
 
-    public Calculator(double a, double b) {
-        this.a = a;
-        this.b = b;
+    public double getA() {
+        return a;
+    }
+
+    public double getB() {
+        return b;
     }
     
 }
