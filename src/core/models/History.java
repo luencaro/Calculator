@@ -15,7 +15,7 @@ public class History {
     private static History instance; //Singleton instance
     private ArrayList<Operation> operations; //History atribute
 
-    public History() {
+    private History() {
         this.operations = new ArrayList<>();
     }
     

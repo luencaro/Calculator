@@ -20,14 +20,16 @@ import javax.swing.JOptionPane;
  * @author edangulo
  */
 public class CalculatorFrame extends javax.swing.JFrame {
+
+    private final History history;
     
-    private History history;
+    //private History history;
 
     /**
      * Creates new form Calculator
      */
     public CalculatorFrame() {
-        this.history = new History();
+        this.history = History.getInstance();
         initComponents();
     }
 
@@ -318,7 +320,8 @@ public class CalculatorFrame extends javax.swing.JFrame {
 
     private void updateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButtonActionPerformed
         // TODO add your handling code here:
-        ArrayList<Operation> operationHistory = History.getInstance().getOperations();
+        ArrayList<Operation> operationHistory = new ArrayList<>();
+        operationHistory = this.history.getOperations();
         Collections.reverse(operationHistory);
         
         DefaultListModel model = new DefaultListModel();
