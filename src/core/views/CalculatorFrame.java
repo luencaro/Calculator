@@ -4,6 +4,9 @@
  */
 package core.views;
 
+import core.controllers.PotencyController;
+import core.controllers.utils.Response;
+import core.controllers.utils.Status;
 import core.models.calculator.Calculator;
 import core.models.History;
 import core.models.Operation;
@@ -125,11 +128,6 @@ public class CalculatorFrame extends javax.swing.JFrame {
         });
 
         num1Field.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        num1Field.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                num1FieldActionPerformed(evt);
-            }
-        });
 
         num2Field.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
@@ -220,75 +218,95 @@ public class CalculatorFrame extends javax.swing.JFrame {
 
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
         // TODO add your handling code here:
-        try {
-            Calculator calculator = new Calculator();
-            
-            double number1 = Double.parseDouble(num1Field.getText());
-            double number2 = Double.parseDouble(num2Field.getText());
-            double result = calculator.add(number1, number2);
-            
-            this.history.addOperation(new Operation(number1, number2, "+", result));
-            
-            resultField.setText("" + result);
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Error", "Error", JOptionPane.ERROR_MESSAGE);
-        }
+//        try {
+//            Calculator calculator = new Calculator();
+//            
+//            double number1 = Double.parseDouble(num1Field.getText());
+//            double number2 = Double.parseDouble(num2Field.getText());
+//            double result = calculator.add(number1, number2);
+//            
+//            this.history.addOperation(new Operation(number1, number2, "+", result));
+//            
+//            resultField.setText("" + result);
+//        } catch (Exception ex) {
+//            JOptionPane.showMessageDialog(null, "Error", "Error", JOptionPane.ERROR_MESSAGE);
+//        }
+        Response response = new Response("Not implemented", Status.NOT_IMPLEMENTED);
+        JOptionPane.showMessageDialog(null, response.getMessage(), "Response Message", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_addButtonActionPerformed
 
     private void subtractButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subtractButtonActionPerformed
         // TODO add your handling code here:
-        try {
-            Calculator calculator = new Calculator();
-            
-            double number1 = Double.parseDouble(num1Field.getText());
-            double number2 = Double.parseDouble(num2Field.getText());
-            double result = calculator.subtract(number1, number2);
-            
-            this.history.addOperation(new Operation(number1, number2, "-", result));
-            
-            resultField.setText("" + result);
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Error", "Error", JOptionPane.ERROR_MESSAGE);
-        }
+//        try {
+//            Calculator calculator = new Calculator();
+//            
+//            double number1 = Double.parseDouble(num1Field.getText());
+//            double number2 = Double.parseDouble(num2Field.getText());
+//            double result = calculator.subtract(number1, number2);
+//            
+//            this.history.addOperation(new Operation(number1, number2, "-", result));
+//            
+//            resultField.setText("" + result);
+//        } catch (Exception ex) {
+//            JOptionPane.showMessageDialog(null, "Error", "Error", JOptionPane.ERROR_MESSAGE);
+//        }
+          Response response = new Response("Not implemented", Status.NOT_IMPLEMENTED);
+          JOptionPane.showMessageDialog(null, response.getMessage(), "Response Message", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_subtractButtonActionPerformed
 
     private void multiplyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplyButtonActionPerformed
         // TODO add your handling code here:
-        try {
-            Calculator calculator = new Calculator();
-            
-            double number1 = Double.parseDouble(num1Field.getText());
-            double number2 = Double.parseDouble(num2Field.getText());
-            double result = calculator.multiply(number1, number2);
-            
-            this.history.addOperation(new Operation(number1, number2, "*", result));
-            
-            resultField.setText("" + result);
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Error", "Error", JOptionPane.ERROR_MESSAGE);
-        }
+//        try {
+//            Calculator calculator = new Calculator();
+//            
+//            double number1 = Double.parseDouble(num1Field.getText());
+//            double number2 = Double.parseDouble(num2Field.getText());
+//            double result = calculator.multiply(number1, number2);
+//            
+//            this.history.addOperation(new Operation(number1, number2, "*", result));
+//            
+//            resultField.setText("" + result);
+//        } catch (Exception ex) {
+//            JOptionPane.showMessageDialog(null, "Error", "Error", JOptionPane.ERROR_MESSAGE);
+//        }
+          Response response = new Response("Not implemented", Status.NOT_IMPLEMENTED);
+          JOptionPane.showMessageDialog(null, response.getMessage(), "Response Message", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_multiplyButtonActionPerformed
 
     private void divideButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divideButtonActionPerformed
         // TODO add your handling code here:
-        try {
-            Calculator calculator = new Calculator();
-            
-            double number1 = Double.parseDouble(num1Field.getText());
-            double number2 = Double.parseDouble(num2Field.getText());
-            double result = calculator.divide(number1, number2);
-            
-            this.history.addOperation(new Operation(number1, number2, "/", result));
-            
-            resultField.setText("" + result);
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Error", "Error", JOptionPane.ERROR_MESSAGE);
-        }
+//        try {
+//            Calculator calculator = new Calculator();
+//            
+//            double number1 = Double.parseDouble(num1Field.getText());
+//            double number2 = Double.parseDouble(num2Field.getText());
+//            double result = calculator.divide(number1, number2);
+//            
+//            this.history.addOperation(new Operation(number1, number2, "/", result));
+//            
+//            resultField.setText("" + result);
+//        } catch (Exception ex) {
+//            JOptionPane.showMessageDialog(null, "Error", "Error", JOptionPane.ERROR_MESSAGE);
+//        }
+          Response response = new Response("Not implemented", Status.NOT_IMPLEMENTED);
+          JOptionPane.showMessageDialog(null, response.getMessage(), "Response Message", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_divideButtonActionPerformed
 
     private void potencyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_potencyButtonActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "Not Implemented", "Error", JOptionPane.ERROR_MESSAGE);
+        String num1 = num1Field.getText();
+        String num2 = num2Field.getText();
+        
+        Response response = PotencyController.makePower(num1, num2);
+        
+        if (response.getStatus() >= 500) {
+            JOptionPane.showMessageDialog(null, response.getMessage(), "Error " + response.getStatus(), JOptionPane.ERROR_MESSAGE);
+        } else if (response.getStatus() >= 400) {
+            JOptionPane.showMessageDialog(null, response.getMessage(), "Error " + response.getStatus(), JOptionPane.WARNING_MESSAGE);
+        } else {
+            resultField.setText(String.valueOf(History.getInstance().getOperations().get(History.getInstance().getOperations().size()-1).getResult()));
+            JOptionPane.showMessageDialog(null, response.getMessage(), "Response Message", JOptionPane.INFORMATION_MESSAGE);
+        }
     }//GEN-LAST:event_potencyButtonActionPerformed
 
     private void clearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearButtonActionPerformed
@@ -300,53 +318,18 @@ public class CalculatorFrame extends javax.swing.JFrame {
 
     private void updateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButtonActionPerformed
         // TODO add your handling code here:
-        ArrayList<Operation> operationHistory = this.history.getOperations();
-        Collections.reverse(this.history.getOperations());
+        ArrayList<Operation> operationHistory = History.getInstance().getOperations();
+        Collections.reverse(operationHistory);
         
         DefaultListModel model = new DefaultListModel();
         model.addAll(operationHistory);
         jList1.setModel(model);
     }//GEN-LAST:event_updateButtonActionPerformed
 
-    private void num1FieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num1FieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_num1FieldActionPerformed
-
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CalculatorFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CalculatorFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CalculatorFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CalculatorFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new CalculatorFrame().setVisible(true);
-            }
-        });
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addButton;
