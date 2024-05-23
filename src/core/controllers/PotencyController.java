@@ -8,24 +8,25 @@ import core.controllers.utils.Response;
 import core.controllers.utils.Status;
 import core.models.History;
 import core.models.Operation;
-import core.models.calculator.Add;
 import core.models.calculator.Calculator;
 import core.models.calculator.Potency;
+import java.text.DecimalFormat;
 
 /**
  *
  * @author lcaba
  */
 public class PotencyController {
+
     public static Response makePower(String a, String b) {
         double aInt, bInt;
-        
-        try{
+
+        try {
             //We verify that the fields are not empty
             if (a.equals("")) {
                 return new Response("Number 1 field is empty", Status.BAD_REQUEST);
             }
-            
+
             if (b.equals("")) {
                 return new Response("Number 2 field is empty", Status.BAD_REQUEST);
             }
@@ -35,18 +36,29 @@ public class PotencyController {
             } catch (NumberFormatException ex) {
                 return new Response("Number 1 must be numeric", Status.BAD_REQUEST);
             }
-            
+
             try {
                 bInt = Double.parseDouble(b);
             } catch (NumberFormatException ex) {
                 return new Response("Number 2 must be numeric", Status.BAD_REQUEST);
             }
             
+            if ((a.contains(".") && a.split("\\.")[1].length() > 3) ||
+                (b.contains(".") && b.split("\\.")[1].length() > 3)) {
+                return new Response("Numbers must have no more than three decimal places", Status.BAD_REQUEST);
+            }
+            
             History history = History.getInstance();
             Calculator power = new Potency(aInt, bInt);
-            history.addOperation(new Operation(power.getA(), power.getB(), "^", power.operation()));
-            return new Response("Potency made successfully", Status.OK);
-        }catch(Exception ex) {
+            double result = power.operation();
+
+            // Formateamos el resultado a tres decimales
+            DecimalFormat df = new DecimalFormat("#.###");
+            String formattedResult = df.format(result);
+
+            history.addOperation(new Operation(power.getA(), power.getB(), "^", result));
+            return new Response("Potency made successfully: " + formattedResult, Status.OK);
+        } catch (Exception ex) {
             return new Response("Unexpected error", Status.INTERNAL_SERVER_ERROR);
         }
     }
