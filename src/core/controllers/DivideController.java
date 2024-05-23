@@ -9,7 +9,7 @@ import core.controllers.utils.Status;
 import core.models.History;
 import core.models.Operation;
 import core.models.calculator.Calculator;
-import core.models.calculator.Potency;
+import core.models.calculator.Divide;
 import java.text.DecimalFormat;
 
 /**
@@ -17,7 +17,7 @@ import java.text.DecimalFormat;
  * @author lcaba
  */
 public class DivideController {
-    public static Response makePower(String a, String b) {
+    public static Response makeDivision(String a, String b) {
         double aInt, bInt;
 
         try {
@@ -42,8 +42,8 @@ public class DivideController {
                 return new Response("Number 2 must be numeric", Status.BAD_REQUEST);
             }
             
-            if (aInt == 0 || bInt == 0) {
-                return new Response("Numbers must not be zero", Status.BAD_REQUEST);
+            if (bInt == 0) {
+                return new Response("Num2 must not be zero", Status.BAD_REQUEST);
             }
             
             if ((a.contains(".") && a.split("\\.")[1].length() > 3) ||
@@ -52,15 +52,15 @@ public class DivideController {
             }
             
             History history = History.getInstance();
-            Calculator power = new Potency(aInt, bInt);
-            double result = power.operation();
+            Calculator division = new Divide(aInt, bInt);
+            double result = division.operation();
 
             // Formateamos el resultado a tres decimales
             DecimalFormat df = new DecimalFormat("#.###");
             String formattedResult = df.format(result);
 
-            history.addOperation(new Operation(power.getA(), power.getB(), "^", result));
-            return new Response("Divide made successfully: " + formattedResult, Status.OK);
+            history.addOperation(new Operation(division.getA(), division.getB(), "^", result));
+            return new Response("Division made successfully: " + formattedResult, Status.OK);
         } catch (Exception ex) {
             return new Response("Unexpected error", Status.INTERNAL_SERVER_ERROR);
         }

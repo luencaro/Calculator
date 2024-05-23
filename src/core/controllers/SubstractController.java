@@ -10,6 +10,7 @@ import core.models.History;
 import core.models.Operation;
 import core.models.calculator.Calculator;
 import core.models.calculator.Potency;
+import core.models.calculator.Substract;
 import java.text.DecimalFormat;
 
 /**
@@ -18,7 +19,7 @@ import java.text.DecimalFormat;
  */
 public class SubstractController {
     
-    public static Response makePower(String a, String b) {
+    public static Response makeSubstraction(String a, String b) {
         double aInt, bInt;
 
         try {
@@ -49,14 +50,14 @@ public class SubstractController {
             }
             
             History history = History.getInstance();
-            Calculator power = new Potency(aInt, bInt);
-            double result = power.operation();
+            Calculator sub = new Substract(aInt, bInt);
+            double result = sub.operation();
 
             // Formateamos el resultado a tres decimales
             DecimalFormat df = new DecimalFormat("#.###");
             String formattedResult = df.format(result);
 
-            history.addOperation(new Operation(power.getA(), power.getB(), "^", result));
+            history.addOperation(new Operation(sub.getA(), sub.getB(), "^", result));
             return new Response("Substract made successfully: " + formattedResult, Status.OK);
         } catch (Exception ex) {
             return new Response("Unexpected error", Status.INTERNAL_SERVER_ERROR);

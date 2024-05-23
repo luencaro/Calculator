@@ -9,7 +9,7 @@ import core.controllers.utils.Status;
 import core.models.History;
 import core.models.Operation;
 import core.models.calculator.Calculator;
-import core.models.calculator.Potency;
+import core.models.calculator.Multiply;
 import java.text.DecimalFormat;
 
 /**
@@ -18,7 +18,7 @@ import java.text.DecimalFormat;
  */
 public class MultiplyController {
 
-    public static Response makePower(String a, String b) {
+    public static Response makeMultiplication(String a, String b) {
         double aInt, bInt;
 
         try {
@@ -49,14 +49,14 @@ public class MultiplyController {
             }
             
             History history = History.getInstance();
-            Calculator power = new Potency(aInt, bInt);
-            double result = power.operation();
+            Calculator mult = new Multiply(aInt, bInt);
+            double result = mult.operation();
 
             // Formateamos el resultado a tres decimales
             DecimalFormat df = new DecimalFormat("#.###");
             String formattedResult = df.format(result);
 
-            history.addOperation(new Operation(power.getA(), power.getB(), "^", result));
+            history.addOperation(new Operation(mult.getA(), mult.getB(), "^", result));
             return new Response("Multiply made successfully: " + formattedResult, Status.OK);
         } catch (Exception ex) {
             return new Response("Unexpected error", Status.INTERNAL_SERVER_ERROR);

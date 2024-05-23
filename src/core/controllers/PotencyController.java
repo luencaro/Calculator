@@ -8,7 +8,6 @@ import core.controllers.utils.Response;
 import core.controllers.utils.Status;
 import core.models.History;
 import core.models.Operation;
-import core.models.calculator.Add;
 import core.models.calculator.Calculator;
 import core.models.calculator.Potency;
 import java.text.DecimalFormat;
