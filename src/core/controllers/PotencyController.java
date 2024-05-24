@@ -56,7 +56,7 @@ public class PotencyController {
             DecimalFormat df = new DecimalFormat("#.###");
             String formattedResult = df.format(result);
 
-            history.addOperation(new Operation(power.getA(), power.getB(), "^", result));
+            history.addOperation(new Operation(power.getA(), power.getB(), "^", Double.parseDouble(formattedResult)));
             return new Response("Potency made successfully: " + formattedResult, Status.OK);
         } catch (Exception ex) {
             return new Response("Unexpected error", Status.INTERNAL_SERVER_ERROR);

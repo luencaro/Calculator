@@ -57,7 +57,7 @@ public class AddController {
             DecimalFormat df = new DecimalFormat("#.###");
             String formattedResult = df.format(result);
 
-            history.addOperation(new Operation(sum.getA(), sum.getB(), "+", result));
+            history.addOperation(new Operation(sum.getA(), sum.getB(), "+", Double.parseDouble(formattedResult)));
             return new Response("Sum made successfully: " + formattedResult, Status.OK);
         } catch (Exception ex) {
             return new Response("Unexpected error", Status.INTERNAL_SERVER_ERROR);

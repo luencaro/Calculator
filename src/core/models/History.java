@@ -28,11 +28,10 @@ public class History {
     }
 
     public ArrayList<Operation> getOperations() {
-        return operations;
+        return this.operations;
     }
-    
-    //Since we want to save operations from the most recent, we treat our history as an stack with the LIFO rule    
+    //Since we want to access the made operations from most recent we'll save them in History as a stack
     public void addOperation(Operation operation) {
-        this.operations.add(operation);
+        this.operations.add(0, operation);
     }
 }
