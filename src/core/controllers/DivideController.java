@@ -59,7 +59,7 @@ public class DivideController {
             DecimalFormat df = new DecimalFormat("#.###");
             String formattedResult = df.format(result);
 
-            history.addOperation(new Operation(division.getA(), division.getB(), "^", result));
+            history.addOperation(new Operation(division.getA(), division.getB(), "/", Double.parseDouble(formattedResult)));
             return new Response("Division made successfully: " + formattedResult, Status.OK);
         } catch (Exception ex) {
             return new Response("Unexpected error", Status.INTERNAL_SERVER_ERROR);

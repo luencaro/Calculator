@@ -4,7 +4,12 @@
  */
 package core.views;
 
+import core.controllers.AddController;
+import core.controllers.DivideController;
+import core.controllers.HistoryController;
+import core.controllers.MultiplyController;
 import core.controllers.PotencyController;
+import core.controllers.SubstractController;
 import core.controllers.utils.Response;
 import core.controllers.utils.Status;
 import core.models.calculator.Calculator;
@@ -220,6 +225,21 @@ public class CalculatorFrame extends javax.swing.JFrame {
 
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
         // TODO add your handling code here:
+        String num1 = num1Field.getText();
+        String num2 = num2Field.getText();
+        
+        Response response = AddController.makeSum(num1, num2);
+        
+        if (response.getStatus() >= 500) {
+            JOptionPane.showMessageDialog(null, response.getMessage(), "Error " + response.getStatus(), JOptionPane.ERROR_MESSAGE);
+        } else if (response.getStatus() >= 400) {
+            JOptionPane.showMessageDialog(null, response.getMessage(), "Error " + response.getStatus(), JOptionPane.WARNING_MESSAGE);
+        } else {
+            resultField.setText(String.valueOf(History.getInstance().getOperations().get(0).getResult()));
+            JOptionPane.showMessageDialog(null, response.getMessage(), "Response Message", JOptionPane.INFORMATION_MESSAGE);
+        }
+        
+        //Old functionalities
 //        try {
 //            Calculator calculator = new Calculator();
 //            
@@ -233,12 +253,26 @@ public class CalculatorFrame extends javax.swing.JFrame {
 //        } catch (Exception ex) {
 //            JOptionPane.showMessageDialog(null, "Error", "Error", JOptionPane.ERROR_MESSAGE);
 //        }
-        Response response = new Response("Not implemented", Status.NOT_IMPLEMENTED);
-        JOptionPane.showMessageDialog(null, response.getMessage(), "Response Message", JOptionPane.INFORMATION_MESSAGE);
+
     }//GEN-LAST:event_addButtonActionPerformed
 
     private void subtractButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subtractButtonActionPerformed
         // TODO add your handling code here:
+        String num1 = num1Field.getText();
+        String num2 = num2Field.getText();
+        
+        Response response = SubstractController.makeSubstraction(num1, num2);
+        
+        if (response.getStatus() >= 500) {
+            JOptionPane.showMessageDialog(null, response.getMessage(), "Error " + response.getStatus(), JOptionPane.ERROR_MESSAGE);
+        } else if (response.getStatus() >= 400) {
+            JOptionPane.showMessageDialog(null, response.getMessage(), "Error " + response.getStatus(), JOptionPane.WARNING_MESSAGE);
+        } else {
+            resultField.setText(String.valueOf(History.getInstance().getOperations().get(0).getResult()));
+            JOptionPane.showMessageDialog(null, response.getMessage(), "Response Message", JOptionPane.INFORMATION_MESSAGE);
+        }
+        
+        //Old functionalities
 //        try {
 //            Calculator calculator = new Calculator();
 //            
@@ -252,12 +286,25 @@ public class CalculatorFrame extends javax.swing.JFrame {
 //        } catch (Exception ex) {
 //            JOptionPane.showMessageDialog(null, "Error", "Error", JOptionPane.ERROR_MESSAGE);
 //        }
-          Response response = new Response("Not implemented", Status.NOT_IMPLEMENTED);
-          JOptionPane.showMessageDialog(null, response.getMessage(), "Response Message", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_subtractButtonActionPerformed
 
     private void multiplyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplyButtonActionPerformed
         // TODO add your handling code here:
+        String num1 = num1Field.getText();
+        String num2 = num2Field.getText();
+        
+        Response response = MultiplyController.makeMultiplication(num1, num2);
+        
+        if (response.getStatus() >= 500) {
+            JOptionPane.showMessageDialog(null, response.getMessage(), "Error " + response.getStatus(), JOptionPane.ERROR_MESSAGE);
+        } else if (response.getStatus() >= 400) {
+            JOptionPane.showMessageDialog(null, response.getMessage(), "Error " + response.getStatus(), JOptionPane.WARNING_MESSAGE);
+        } else {
+            resultField.setText(String.valueOf(History.getInstance().getOperations().get(0).getResult()));
+            JOptionPane.showMessageDialog(null, response.getMessage(), "Response Message", JOptionPane.INFORMATION_MESSAGE);
+        }
+        
+        //Old functionalities
 //        try {
 //            Calculator calculator = new Calculator();
 //            
@@ -271,13 +318,27 @@ public class CalculatorFrame extends javax.swing.JFrame {
 //        } catch (Exception ex) {
 //            JOptionPane.showMessageDialog(null, "Error", "Error", JOptionPane.ERROR_MESSAGE);
 //        }
-          Response response = new Response("Not implemented", Status.NOT_IMPLEMENTED);
-          JOptionPane.showMessageDialog(null, response.getMessage(), "Response Message", JOptionPane.INFORMATION_MESSAGE);
+
     }//GEN-LAST:event_multiplyButtonActionPerformed
 
     private void divideButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divideButtonActionPerformed
         // TODO add your handling code here:
-//        try {
+        String num1 = num1Field.getText();
+        String num2 = num2Field.getText();
+        
+        Response response = DivideController.makeDivision(num1, num2);
+        
+        if (response.getStatus() >= 500) {
+            JOptionPane.showMessageDialog(null, response.getMessage(), "Error " + response.getStatus(), JOptionPane.ERROR_MESSAGE);
+        } else if (response.getStatus() >= 400) {
+            JOptionPane.showMessageDialog(null, response.getMessage(), "Error " + response.getStatus(), JOptionPane.WARNING_MESSAGE);
+        } else {
+            resultField.setText(String.valueOf(History.getInstance().getOperations().get(0).getResult()));
+            JOptionPane.showMessageDialog(null, response.getMessage(), "Response Message", JOptionPane.INFORMATION_MESSAGE);
+        }
+
+        //old functionalities
+        //try {
 //            Calculator calculator = new Calculator();
 //            
 //            double number1 = Double.parseDouble(num1Field.getText());
@@ -290,8 +351,6 @@ public class CalculatorFrame extends javax.swing.JFrame {
 //        } catch (Exception ex) {
 //            JOptionPane.showMessageDialog(null, "Error", "Error", JOptionPane.ERROR_MESSAGE);
 //        }
-          Response response = new Response("Not implemented", Status.NOT_IMPLEMENTED);
-          JOptionPane.showMessageDialog(null, response.getMessage(), "Response Message", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_divideButtonActionPerformed
 
     private void potencyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_potencyButtonActionPerformed
@@ -306,7 +365,7 @@ public class CalculatorFrame extends javax.swing.JFrame {
         } else if (response.getStatus() >= 400) {
             JOptionPane.showMessageDialog(null, response.getMessage(), "Error " + response.getStatus(), JOptionPane.WARNING_MESSAGE);
         } else {
-            resultField.setText(String.valueOf(History.getInstance().getOperations().get(History.getInstance().getOperations().size()-1).getResult()));
+            resultField.setText(String.valueOf(History.getInstance().getOperations().get(0).getResult()));
             JOptionPane.showMessageDialog(null, response.getMessage(), "Response Message", JOptionPane.INFORMATION_MESSAGE);
         }
     }//GEN-LAST:event_potencyButtonActionPerformed
@@ -320,13 +379,21 @@ public class CalculatorFrame extends javax.swing.JFrame {
 
     private void updateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButtonActionPerformed
         // TODO add your handling code here:
-        ArrayList<Operation> operationHistory = new ArrayList<>();
-        operationHistory = this.history.getOperations();
-        Collections.reverse(operationHistory);
+        Response response = HistoryController.returnHistory(this.history);
         
-        DefaultListModel model = new DefaultListModel();
-        model.addAll(operationHistory);
-        jList1.setModel(model);
+        if (response.getStatus() >= 500) {
+            JOptionPane.showMessageDialog(null, response.getMessage(), "Error " + response.getStatus(), JOptionPane.ERROR_MESSAGE);
+        } else if (response.getStatus() >= 400) {
+            JOptionPane.showMessageDialog(null, response.getMessage(), "Error " + response.getStatus(), JOptionPane.WARNING_MESSAGE);
+        } else {
+            jList1.removeAll();
+            
+            DefaultListModel model = new DefaultListModel();
+            model.addAll(this.history.getOperations());
+            jList1.setModel(model);
+            JOptionPane.showMessageDialog(null, response.getMessage(), "Response Message", JOptionPane.INFORMATION_MESSAGE);
+        }
+     
     }//GEN-LAST:event_updateButtonActionPerformed
 
     /**

@@ -57,8 +57,8 @@ public class SubstractController {
             DecimalFormat df = new DecimalFormat("#.###");
             String formattedResult = df.format(result);
 
-            history.addOperation(new Operation(sub.getA(), sub.getB(), "^", result));
-            return new Response("Substract made successfully: " + formattedResult, Status.OK);
+            history.addOperation(new Operation(sub.getA(), sub.getB(), "-", Double.parseDouble(formattedResult)));
+            return new Response("Substraction made successfully: " + formattedResult, Status.OK);
         } catch (Exception ex) {
             return new Response("Unexpected error", Status.INTERNAL_SERVER_ERROR);
         }
